@@ -1,0 +1,476 @@
+Hugo_Symbol	OMIM	cell cycle checkpoint	HR	DSB	DNA replication	DSBR	MMR	DNA repair	MMR_4genes	cell cycle	response to DNA damage stimulus	BER	NER	OncoKB Oncogene	OncoKB TSG	mechanism
+TAP1	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+ERRFI1	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	loss-of-function
+STK19	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+CRKL	0	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	
+FOXA1	0	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	gain-of-function
+STK11	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	loss-of-function
+MEN1	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	loss-of-function
+B2M	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	
+TAP2	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+CRLF2	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	gain-of-function
+CDC73	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	loss-of-function
+PIK3CA	1	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	
+PIK3CB	0	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	
+PIK3CD	0	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	
+PIK3CG	0	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	gain-of-function
+IGF1R	1	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	
+WHSC1L1	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+NUP93	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	Unsure
+PIK3C2G	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	Unsure
+SMARCD1	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+PIK3C3	0	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	gain-of-function
+GATA2	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+GATA3	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+ARID5B	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	loss-of-function
+CCND1	1	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	gain-of-function
+MAX	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+CCND3	0	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	gain-of-function
+CCND2	0	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	
+PTEN	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	loss-of-function
+NTHL1	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+CTCF	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	
+IL7R	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	gain-of-function
+JAK3	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	Unsure
+CDKN1B	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	
+CDKN1A	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	loss-of-function
+RIT1	1	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	
+XPO1	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+CSDE1	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+MST1	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	loss-of-function
+SOX17	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	
+JAK2	1	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	gain-of-function
+H3F3B	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	Unsure
+H3F3A	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+JAK1	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	gain-of-function
+TMEM127	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+BLM	1	0	0	0	1	0	0	1	0	0	0	0	0	0.0	1.0	loss-of-function
+PPARG	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+HIST2H3D	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+HIST2H3C	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+RPS6KA4	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	Unsure
+CBL	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	loss-of-function
+PRDM1	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	loss-of-function
+EIF4A2	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+DNMT1	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	gain-of-function
+SESN1	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+SDCCAG8	0	0	0	0	0	0	0	0	0	0	0	0	0			
+SESN3	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+SMAD4	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	
+RET	1	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	gain-of-function
+SMAD3	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	loss-of-function
+SMO	1	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	gain-of-function
+POLE	1	0	0	0	1	0	0	1	0	0	1	0	0	0.0	1.0	loss-of-function
+REL	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	gain-of-function
+FH	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	loss-of-function
+AMER1	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	loss-of-function
+PARK2	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	loss-of-function
+TSC2	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	loss-of-function
+TSC1	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	
+NCOA3	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	gain-of-function
+RBM10	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	
+INHA	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+RXRA	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+SH2B3	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	loss-of-function
+YAP1	0	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	
+ALK	1	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	gain-of-function
+MAP2K2	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	gain-of-function
+LMO1	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+FOXO1	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+PBRM1	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	
+PRKD1	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+CDC42	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+ERBB2	1	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	gain-of-function
+FLCN	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	loss-of-function
+EGFR	1	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	gain-of-function
+CTNNB1	1	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	
+PLCG2	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	gain-of-function
+ERF	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	
+ERG	0	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	
+MITF	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+RPTOR	0	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	
+MYOD1	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+CDK12	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+KLF4	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	Unsure
+PGR	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+CXCR4	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+FIP1L1	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+MDC1	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	loss-of-function
+SUFU	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	loss-of-function
+HGF	1	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	gain-of-function
+PHOX2B	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+HOXB13	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	gain-of-function
+E2F3	0	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	
+CALR	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+MAP3K13	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	loss-of-function
+MAP3K14	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+BTK	0	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	
+CSF3R	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	gain-of-function
+SPRED1	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+FAM58A	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+VTCN1	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+ARAF	0	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	gain-of-function
+INSRR	0	0	0	0	0	0	0	0	0	0	0	0	0			
+IKBKE	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	gain-of-function
+ROS1	0	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	gain-of-function
+RARA	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+NFE2L2	0	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	gain-of-function
+HNF1A	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	loss-of-function
+CDH1	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	loss-of-function
+GATA1	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+CDKN2B	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	
+CDKN2C	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	
+BARD1	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	loss-of-function
+RFFL	0	0	0	0	0	0	0	0	0	0	0	0	0			
+CENPA	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+RYBP	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	
+ARID1B	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	loss-of-function
+ARID1A	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	loss-of-function
+CYLD	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+WHSC1	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+APC	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	loss-of-function
+PAK7	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+PAK1	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	gain-of-function
+RECQL4	1	0	0	0	0	0	0	1	0	0	0	0	0	0.0	0.0	loss-of-function
+FOXP1	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	unsure
+FUBP1	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	
+RRAS	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+CYSLTR2	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+MYCN	1	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	
+U2AF1	0	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	
+CCNE1	0	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	
+IGF2	1	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	gain-of-function
+IGF1	1	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	
+TCF3	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+ARID2	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	loss-of-function
+TEK	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+SMYD3	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+EIF4E	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+EPAS1	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+MGA	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	loss-of-function
+IRF4	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	gain-of-function
+MEF2B	0	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	
+NSD1	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	loss-of-function
+CREBBP	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	
+PDGFRB	1	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	gain-of-function
+PDGFRA	1	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	gain-of-function
+ATM	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	loss-of-function
+ZFHX3	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	loss-of-function
+ATR	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	loss-of-function
+BRIP1	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	loss-of-function
+FLT4	1	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	
+FLT3	1	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	gain-of-function
+FLT1	0	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	gain-of-function
+MRE11A	0	0	0	1	0	1	0	1	0	0	1	0	0	0.0	0.0	loss-of-function
+SLX4	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+POLD1	1	0	0	0	1	0	0	1	0	0	0	0	0	0.0	1.0	
+DNAJB1	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	Unsure
+CSF1R	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	gain-of-function
+RPS6KB2	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	Unsure
+FANCC	1	0	0	0	0	0	0	1	0	0	1	0	0	0.0	1.0	loss-of-function
+RAF1	1	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	
+DOT1L	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	gain-of-function
+FBXW7	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	
+TGFBR2	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	loss-of-function
+TGFBR1	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	loss-of-function
+FANCA	1	0	0	0	0	0	0	1	0	0	1	0	0	0.0	1.0	loss-of-function
+TET1	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	loss-of-function
+TET2	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	loss-of-function
+MTOR	0	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	gain-of-function
+EP300	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	
+KNSTRN	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+IRS1	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	gain-of-function
+IRS2	0	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	gain-of-function
+KEAP1	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	loss-of-function
+SHOC2	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+CDK4	1	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	gain-of-function
+RAD52	0	0	0	0	0	1	0	1	0	0	1	0	0	0.0	0.0	loss-of-function
+CDK6	0	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	
+RAD50	0	0	0	0	0	1	0	1	0	1	1	0	0	0.0	1.0	loss-of-function
+CDK8	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+MSH2	1	0	0	0	0	0	1	1	1	1	1	0	0	0.0	1.0	loss-of-function
+ERCC3	1	0	0	0	0	0	0	1	0	0	1	0	1	0.0	1.0	loss-of-function
+ERCC4	1	0	0	0	0	0	0	1	0	0	1	0	1	0.0	1.0	loss-of-function
+ERCC5	1	0	0	0	0	0	0	1	0	0	1	0	1	0.0	0.0	loss-of-function
+MSH6	1	0	0	0	0	0	1	1	1	0	1	0	0	0.0	1.0	loss-of-function
+EZH1	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+SOX9	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+MCL1	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	gain-of-function
+SOX2	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+BBC3	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	loss-of-function
+SMARCA4	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	loss-of-function
+CEBPA	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	loss-of-function
+XRCC2	0	0	0	0	0	0	0	1	0	0	1	0	0	0.0	1.0	loss-of-function
+AXIN2	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	loss-of-function
+AXIN1	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	loss-of-function
+RAD54L	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	loss-of-function
+FYN	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+RB1	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	loss-of-function
+MDM4	0	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	
+MED12	0	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	gain-of-function
+AURKA	1	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	
+SUZ12	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	loss-of-function
+PRKCI	0	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	
+GREM1	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+RAC2	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+RAC1	0	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	
+CDKN2Ap14ARF	0	0	0	0	0	0	0	0	0	0	0	0	0			
+CARD11	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+HIST1H3B	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	Unsure
+HIST1H3C	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+HIST1H3A	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	Unsure
+HIST1H3F	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	Unsure
+HIST1H3G	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	Unsure
+HIST1H3D	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	Unsure
+HIST1H3E	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+HIST1H3J	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+PDCD1LG2	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+HIST1H3H	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	unsure
+HIST1H3I	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+BAP1	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	loss-of-function
+NOTCH4	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	Unsure
+SRSF2	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+NOTCH1	0	0	0	0	0	0	0	0	0	0	0	0	0	1.0	1.0	
+NOTCH2	0	0	0	0	0	0	0	0	0	0	0	0	0	1.0	1.0	loss-of-function
+NOTCH3	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	Unsure
+FGFR4	1	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	gain-of-function
+FOXL2	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	Unsure
+PTCH1	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	loss-of-function
+PMAIP1	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+PPP4R2	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+AXL	0	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	gain-of-function
+GPS2	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	loss-of-function
+MAP3K1	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	loss-of-function
+FAM46C	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+INHBA	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+H3F3C	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	Unsure
+CUL3	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	loss-of-function
+BRCA1	1	0	1	0	0	0	0	1	0	1	1	0	0	0.0	1.0	loss-of-function
+ERBB3	0	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	gain-of-function
+BRCA2	1	0	1	0	0	0	0	1	0	0	1	0	0	0.0	1.0	loss-of-function
+NF1	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	loss-of-function
+ERBB4	0	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	
+IDH2	0	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	
+IDH1	1	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	gain-of-function
+SETD8	0	0	0	0	0	0	0	0	0	0	0	0	0			
+BRD4	0	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	
+MDM2	1	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	
+SETD2	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	loss-of-function
+FGFR2	1	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	gain-of-function
+FGFR3	1	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	gain-of-function
+FGFR1	1	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	gain-of-function
+SYK	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	gain-of-function
+PTPN11	1	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	gain-of-function
+TCF7L2	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	loss-of-function
+KIT	1	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	gain-of-function
+SPEN	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	
+RUNX1	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	loss-of-function
+HIST3H3	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	Unsure
+PNRC1	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	loss-of-function
+HRAS	1	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	gain-of-function
+RRAS2	0	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	
+CARM1	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+TNFRSF14	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	loss-of-function
+IFNGR1	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	loss-of-function
+TSHR	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+RICTOR	0	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	gain-of-function
+TIMM8B	0	0	0	0	0	0	0	0	0	0	0	0	0			
+DAXX	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	
+SDHAF2	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+PPM1D	1	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	gain-of-function
+MET	1	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	gain-of-function
+JUN	0	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	
+PPP6C	0	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	
+BABAM1	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+CHEK2	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	loss-of-function
+CHEK1	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	loss-of-function
+CTLA4	1	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	
+EPHB1	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+STK40	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+PARP1	0	0	0	0	0	0	0	1	0	0	1	0	0	1.0	0.0	gain-of-function
+PAX5	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	unsure
+TP53	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	loss-of-function
+GNAQ	1	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	
+ESR1	1	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	
+DDR2	0	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	
+CD274	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	loss-of-function
+PALB2	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	loss-of-function
+CD276	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	gain-of-function
+SHQ1	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	loss-of-function
+VEGFA	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	gain-of-function
+SH2D1A	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+ERCC2	1	0	0	0	0	0	0	0	0	0	0	0	1	0.0	1.0	loss-of-function
+INPP4B	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	
+TBX3	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	loss-of-function
+UPF1	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+NTRK2	0	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	
+CD79B	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+CD79A	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+STAT3	0	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	
+CBFB	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+OBSL1	0	0	0	0	0	0	0	0	0	0	0	0	0			
+ALOX12B	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	gain-of-function
+TCEB1	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+KDR	1	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	gain-of-function
+SRC	1	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	
+MSH3	0	0	0	0	0	0	1	1	0	0	1	0	0	0.0	0.0	
+SF3B1	1	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	
+ATRX	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	
+RAD51D	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	loss-of-function
+RAD51C	1	0	0	0	0	0	0	1	0	0	1	0	0	0.0	1.0	loss-of-function
+RAD51B	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	loss-of-function
+LATS2	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	loss-of-function
+IL10	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+GNAS	1	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	
+EZH2	0	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	gain-of-function
+RHEB	0	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	
+PPP2R1A	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	loss-of-function
+WT1	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+BIRC3	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	gain-of-function
+BMPR1A	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+MAP2K1	0	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	
+TOP1	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	
+MAP2K4	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	
+YES1	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+ANKRD11	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	
+MAPKAP1	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+TERT	1	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	gain-of-function
+MALT1	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	gain-of-function
+KMT2C	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	loss-of-function
+KMT2B	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	
+KMT2A	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	loss-of-function
+SMARCB1	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	loss-of-function
+KMT2D	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	loss-of-function
+SPOP	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	loss-of-function
+MSI2	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+MSI1	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+ZRSR2	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+TP53BP1	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	
+EPCAM	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	Unsure
+INPPL1	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+INSR	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	gain-of-function
+PIM1	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	gain-of-function
+CASP8	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	loss-of-function
+BCL6	1	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	
+BCL2	1	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	
+BCL2L1	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+PLK2	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	loss-of-function
+AKT1	1	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	
+AKT2	0	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	gain-of-function
+AKT3	0	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	gain-of-function
+NKX2-1	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+SESN2	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+EIF1AX	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+NTRK1	1	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	gain-of-function
+INPP4A	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	loss-of-function
+NTRK3	0	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	
+PTP4A1	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+MYC	1	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	gain-of-function
+AURKB	0	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	gain-of-function
+NUF2	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+NEGR1	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+SMAD2	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	
+PMS1	0	0	0	0	0	0	1	1	0	1	1	0	0	0.0	1.0	loss-of-function
+PMS2	1	0	0	0	0	0	1	0	1	0	0	0	0	0.0	0.0	loss-of-function
+LYN	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+KRAS	1	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	
+SOCS1	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+MST1R	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	gain-of-function
+XIAP	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+GSK3B	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+EGFL7	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	gain-of-function
+FAT1	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	loss-of-function
+KDM5A	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	gain-of-function
+KDM5C	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	loss-of-function
+HLA-B	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	
+HLA-A	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	
+NFKBIA	0	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	
+EED	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	loss-of-function
+PREX2	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+ASXL1	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	loss-of-function
+FAM175A	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	loss-of-function
+ASXL2	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	loss-of-function
+PIK3R3	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	loss-of-function
+PIK3R2	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	gain-of-function
+PIK3R1	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	loss-of-function
+PTPRD	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	loss-of-function
+MYD88	1	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	gain-of-function
+STAG2	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	loss-of-function
+RNF43	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	loss-of-function
+HIST1H2BD	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	Unsure
+DCUN1D1	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+RECQL	0	0	0	0	0	0	0	1	0	0	0	0	0	0.0	0.0	
+RAD21	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	
+RHOA	0	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	
+FGF4	0	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	gain-of-function
+FGF3	1	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	gain-of-function
+ETV1	0	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	gain-of-function
+PRDM14	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+ETV6	1	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	gain-of-function
+MPL	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	gain-of-function
+TNFAIP3	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+AGO2	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+RFWD2	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+EPHA7	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	gain-of-function
+EPHA5	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	gain-of-function
+EPHA3	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+MUTYH	1	0	0	0	0	0	1	1	0	1	1	1	0	0.0	0.0	loss-of-function
+ABL1	1	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	
+IKZF1	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	Unsure
+NCOR1	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	
+TP63	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	gain-of-function
+DROSHA	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+BCL10	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	loss-of-function
+MAPK3	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	loss-of-function
+FGF19	0	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	
+MAPK1	0	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	
+KDM6A	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	
+NBN	1	1	0	0	0	1	0	0	0	0	0	0	0	0.0	0.0	loss-of-function
+DUSP4	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+PDCD1	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	loss-of-function
+PTPRT	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	loss-of-function
+ICOSLG	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	gain-of-function
+BCOR	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	loss-of-function
+HIST1H1C	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	Unsure
+DICER1	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	loss-of-function
+SOS1	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+WWTR1	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+ID3	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+STAT5B	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	gain-of-function
+STAT5A	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	gain-of-function
+NKX3-1	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	loss-of-function
+CIC	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	loss-of-function
+MYCL1	0	0	0	0	0	0	0	0	0	0	0	0	0			
+ACVR1	0	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	
+CDKN2Ap16INK4A	0	0	0	0	0	0	0	0	0	0	0	0	0			
+VHL	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	loss-of-function
+LATS1	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	loss-of-function
+ELF3	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+RAB35	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+BCL2L11	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	loss-of-function
+NRAS	1	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	gain-of-function
+MLH1	1	0	0	0	0	0	1	1	1	1	1	0	0	0.0	1.0	loss-of-function
+GLI1	0	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	gain-of-function
+RAD51	1	0	1	0	0	0	0	1	0	0	1	0	0	1.0	0.0	gain-of-function
+DNMT3B	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	loss-of-function
+NF2	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	
+TRAF2	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	gain-of-function
+DNMT3A	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	loss-of-function
+RRAGC	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+TRAF7	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+TMPRSS2	0	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	gain-of-function
+AR	1	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	
+RTEL1	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+NPM1	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	
+RASA1	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	loss-of-function
+DIS3	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	loss-of-function
+PTPRS	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	loss-of-function
+GRIN2A	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	Unsure
+BRAF	1	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	gain-of-function
+GNA11	0	0	0	0	0	0	0	0	0	0	0	0	0	1.0	0.0	gain-of-function
+SDHA	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	loss-of-function
+PDPK1	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
+SDHC	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	loss-of-function
+SDHB	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	loss-of-function
+SDHD	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	1.0	loss-of-function
+PRKAR1A	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	
