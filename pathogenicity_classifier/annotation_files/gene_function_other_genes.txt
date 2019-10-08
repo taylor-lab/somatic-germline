@@ -1,0 +1,122 @@
+Hugo_Symbol	type_of_gene	oncogenic mechanism
+ALOX12B	Other	gain-of-function
+BBC3	Other	loss-of-function
+BRIP1	Other	loss-of-function
+CD274	Other	loss-of-function
+CD276	Other	gain-of-function
+CRLF2	Other	gain-of-function
+CSF1R	Other	gain-of-function
+CSF3R	Other	gain-of-function
+CUL3	Other	loss-of-function
+DICER1	Other	loss-of-function
+DIS3	Other	loss-of-function
+DNAJB1	Other	unsure
+DNMT1	Other	gain-of-function
+DNMT3B	Other	loss-of-function
+DOT1L	Other	gain-of-function
+EED	Other	loss-of-function
+EGFL7	Other	gain-of-function
+EPCAM	Other	unsure
+EPHA5	Other	gain-of-function
+EPHA7	Other	gain-of-function
+ERCC5	Other	loss-of-function
+FAM175A	Other	loss-of-function
+FIP1L1	Other	
+FLCN	Other	loss-of-function
+FOXL2	Other	unsure
+GPS2	Other	loss-of-function
+GRIN2A	Other	unsure
+H3F3B	Other	unsure
+H3F3C	Other	unsure
+HIST1H1C	Other	unsure
+HIST1H2BD	Other	unsure
+HIST1H3A	Other	unsure
+HIST1H3B	Other	unsure
+HIST1H3D	Other	unsure
+HIST1H3F	Other	unsure
+HIST1H3G	Other	unsure
+HIST3H3	Other	unsure
+HOXB13	Other	gain-of-function
+ICOSLG	Other	gain-of-function
+IFNGR1	Other	loss-of-function
+IKBKE	Other	gain-of-function
+IKZF1	Other	unsure
+IL7R	Other	gain-of-function
+INPP4A	Other	loss-of-function
+INSR	Other	gain-of-function
+IRF4	Other	gain-of-function
+IRS1	Other	gain-of-function
+JAK1	Other	gain-of-function
+JAK3	Other	unsure
+KDM5A	Other	gain-of-function
+KLF4	Other	unsure
+LATS1	Other	loss-of-function
+LATS2	Other	loss-of-function
+MALT1	Other	gain-of-function
+MAP2K2	Other	gain-of-function
+MAP3K13	Other	loss-of-function
+MAPK3	Other	loss-of-function
+MCL1	Other	gain-of-function
+MDC1	Other	loss-of-function
+MPL	Other	gain-of-function
+MRE11A	Other	loss-of-function
+MST1	Other	loss-of-function
+MST1R	Other	gain-of-function
+MUTYH	Other	loss-of-function
+MYCL	Other	gain-of-function
+NBN	Other	loss-of-function
+NCOA3	Other	gain-of-function
+NKX3-1	Other	loss-of-function
+NOTCH3	Other	unsure
+NOTCH4	Other	unsure
+NSD1	Other	loss-of-function
+NUP93	Other	unsure
+PALB2	Other	loss-of-function
+PARK2	Other	loss-of-function
+PAX5	Other	unsure
+PDCD1	Other	loss-of-function
+PHOX2B	Other	
+PIK3C2G	Other	unsure
+PIK3R2	Other	gain-of-function
+PIM1	Other	gain-of-function
+PLCG2	Other	gain-of-function
+PLK2	Other	loss-of-function
+PMS2	Other	loss-of-function
+PNRC1	Other	loss-of-function
+PPP2R1A	Other	loss-of-function
+PRDM1	Other	loss-of-function
+PTPRD	Other	loss-of-function
+PTPRS	Other	loss-of-function
+PTPRT	Other	loss-of-function
+RAD51B	Other	loss-of-function
+RAD52	Other	loss-of-function
+RAD54L	Other	loss-of-function
+RECQL4	Other	loss-of-function
+REL	Other	gain-of-function
+RPS6KA4	Other	unsure
+RPS6KB2	Other	unsure
+SDHAF2	Other	
+SH2B3	Other	loss-of-function
+STAT5A	Other	gain-of-function
+STAT5B	Other	gain-of-function
+SUFU	Other	loss-of-function
+SUZ12	Other	loss-of-function
+SYK	Other	gain-of-function
+TBX3	Other	loss-of-function
+TET1	Other	loss-of-function
+TMEM127	Other	
+TNFRSF14	Other	loss-of-function
+TRAF7	Other	
+TSHR	Other	
+VTCN1	Other	
+XPO1	Other	
+YES1	Other	
+ZFHX3	Other	loss-of-function
+ZRSR2	Other	
+BIRC3	Other	gain-of-function
+FOXP1	Other	unsure
+HIST1H3H	Other	unsure
+PAK1	Other	gain-of-function
+TP63	Other	gain-of-function
+TRAF2	Other	gain-of-function
+VEGFA	Other	gain-of-function
