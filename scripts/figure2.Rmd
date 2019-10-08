@@ -1,0 +1,324 @@
+---
+title: "Figure 2"
+output: html_document
+chunk_output_type: console
+---
+
+```{r setup, include = FALSE, echo = FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, autodep = knitr::dep_prev())
+source(here::here('scripts/prerequisites.R'))
+```
+
+### Panel A
+
+```{r Panel A}
+  obs_pathogenic <-
+    germline_variants %>%
+    filter(is_tumor_suppressor, sample_facets_qc_passed) %>% 
+    group_by(penetrance) %>%
+    summarise(
+      total_count=n(),
+      num_biallelic = length(which(biallelic_type != 'None')),
+      biallelic_rate = round(num_biallelic/total_count, 3),
+      num_mut_lost = length(which(biallelic_type == 'None' & zygosity_in_tumor == 'Loss_of_Mut')),
+      mut_loss_rate = round(num_mut_lost/total_count, 3)
+    ) %>% 
+    mutate(wt_rate = 1 - biallelic_rate - mut_loss_rate, 
+           type="Path.") 
+  
+  combined <- 
+    rbind(obs_pathogenic %>% melt, benign_all_vus %>% melt) %>%
+    filter(grepl("rate$", variable)) 
+  
+  combined$variable = factor(combined$variable, levels=(c("wt_rate", "mut_loss_rate", "biallelic_rate")))
+  combined$penetrance = factor(combined$penetrance, levels=c("High", "Moderate", "Low", "Uncertain"))
+  combined$type = factor(combined$type, levels=c("Path.", "VUS"))
+  
+  significance_2A <-
+    obs_pathogenic %>% 
+    dplyr::left_join(benign_all_vus, by=c("penetrance")) %>% 
+    dplyr::rowwise() %>% 
+    dplyr::mutate(pval = fisher.test(matrix(c(num_biallelic.x, total_count.x - num_biallelic.x, 
+                                              num_biallelic.y, total_count.y - num_biallelic.y), 
+                                            nrow=2, ncol=2, byrow=T), simulate.p.value = T)$p.value) 
+  
+  ggplot(combined %>% 
+         mutate(variable = as.character(variable)) %>% 
+         mutate(variable = ifelse(variable == 'wt_rate', 'Heterozygous', variable)) %>%
+         mutate(variable = ifelse(variable == 'mut_loss_rate', 'Loss of mutant', variable)) %>% 
+         mutate(variable = ifelse(variable == 'biallelic_rate', 'Biallelic', variable)) %>%
+         mutate(variable = factor(variable, levels=c('Heterozygous', 'Loss of mutant', 'Biallelic'))),
+       aes(x=type, y=value, fill=as.factor(variable))) + 
+  geom_bar(stat="identity", color=NA, size=0.5) +
+  facet_grid(. ~ penetrance) +
+  scale_x_discrete(expand=c(0.05, 0.01)) +
+  scale_y_continuous(labels=percent, expand=c(0.01, 0.00)) +
+  scale_fill_manual(
+    values=c("Heterozygous" = "#D1D2D4", 
+             "Loss of mutant" = "#7B93A5", 
+             "Biallelic" = "#0F3B5D")) +
+  theme_bw() +
+  theme(
+    text = element_text(family = 'ArialMT', size = 12),
+    axis.text = element_text(family = 'ArialMT', size = 12, color = 'black'),
+    line = element_line(size = .75*(.75/1.6), lineend = 'round'),
+    plot.background = element_blank(),
+    panel.grid.major.x = element_blank(),
+    panel.grid.major.y = element_blank(),
+    panel.grid.minor.x = element_blank(),
+    panel.grid.minor.y = element_blank(),
+    strip.background = element_blank(),
+    panel.border = element_blank(),
+    axis.line.x = element_line(color = 'black', size = .75*(.75/1.6), lineend = 'round'),
+    axis.line.y = element_line(color = 'black', size = .75*(.75/1.6), lineend = 'round'),
+    axis.ticks.length = unit(2, 'pt'),
+    axis.ticks.x = element_line(color = 'black', size = .75*(.75/1.6), lineend = 'round'),
+    axis.ticks.y = element_line(color = 'black', size = .75*(.75/1.6), lineend = 'round'),
+    legend.background = element_blank(),
+    legend.key = element_blank(),
+    legend.key.size = unit(.5, "cm"),
+    legend.title = element_blank(),
+    panel.background = element_blank(),
+    plot.margin = unit(c(0.25,0.5,0.25,0.25), 'lines')) +
+  xlab("") +
+  ylab("% of germline carriers")
+
+```
+
+
+```{r Panel B}
+biallelic_by_prevalence <-
+  germline_variants %>% 
+  filter(is_tumor_suppressor, sample_facets_qc_passed) %>% 
+  left_join(gene_cancer_type_assoc, by=c("Hugo_Symbol" = "gene", 
+                                         "Proposed_level" = "cancer_type", 
+                                         "penetrance")) %>%
+  dplyr::mutate(penetrance = ifelse(penetrance %in% c("Low", "Uncertain"),
+                                    "Low/Uncertain",
+                                    as.character(penetrance))) %>%
+  mutate(association_by_prevalence = ifelse(grepl('Yes', association_by_prevalence), 'Yes',
+                                            ifelse(is.na(association_by_prevalence), 'No Power', 'No'))) %>%
+  dplyr::group_by(association_by_prevalence, penetrance) %>%
+  dplyr::summarise(total = n(),
+            biallelic = length(which(biallelic_type!="None"))) %>%
+  dplyr::mutate(mono_allelic = total-biallelic,
+         biallelic_rate = round(biallelic/total, 2)) %>%
+  dplyr::arrange(penetrance, association_by_prevalence) %>%
+  dplyr::mutate(biallelic_rate_lower = binom.confint(biallelic, total, methods="wilson")$lower,
+         biallelic_rate_upper = binom.confint(biallelic, total, methods="wilson")$upper)
+
+biallelic_by_prevalence <-
+  biallelic_by_prevalence %>%
+  dplyr::left_join(biallelic_by_prevalence %>% 
+                     dplyr::group_by(penetrance)%>% 
+                     dplyr::summarise(cum_total=sum(total)) %>% 
+                     ungroup) %>%
+  dplyr::mutate(freq_in_pen = total/cum_total)
+
+biallelic_by_prevalence$penetrance <- 
+  factor(biallelic_by_prevalence$penetrance, levels=c("High", "Moderate", "Low/Uncertain"))
+
+biallelic_by_prevalence_summary <-
+  biallelic_by_prevalence %>%
+  ungroup() %>%
+  dplyr::filter(association_by_prevalence == "No") %>%
+  dplyr::select(penetrance, 
+         no_assoc_biallelic_rate = biallelic_rate, 
+         no_assoc_biallelic_rate_lower = biallelic_rate_lower,
+         no_assoc_biallelic_rate_upper = biallelic_rate_upper) %>%
+  dplyr::left_join(biallelic_by_prevalence %>%
+              ungroup %>%
+                dplyr::filter(association_by_prevalence == "Yes") %>%
+                dplyr::select(penetrance, 
+                     assoc_biallelic_rate = biallelic_rate, 
+                     assoc_biallelic_rate_lower = biallelic_rate_lower,
+                     assoc_biallelic_rate_upper = biallelic_rate_upper)) %>%
+  dplyr::left_join(biallelic_by_prevalence %>% 
+                     group_by(penetrance) %>% 
+                     summarise(total = sum(total),
+                               biallelic = sum(biallelic),
+                               mono_allelic = sum(mono_allelic)) %>%
+                     ungroup %>%
+                     dplyr::mutate(biallelic_rate = round(biallelic/total, 2)) %>%
+                     dplyr::mutate(biallelic_rate_lower = binom.confint(biallelic, total, methods='wilson')$lower,
+                            biallelic_rate_upper = binom.confint(biallelic, total, methods='wilson')$upper) %>%
+                     dplyr::select(penetrance, 
+                                   biallelic_rate_any_assoc = biallelic_rate,
+                                   biallelic_rate_any_assoc_lower = biallelic_rate_lower,
+                                   biallelic_rate_any_assoc_upper = biallelic_rate_upper)) 
+
+
+biallelic_by_prevalence_summary$penetrance = factor(biallelic_by_prevalence_summary$penetrance, 
+                                                    levels=c("High", "Moderate", "Low/Uncertain"))
+
+benign_biallelic_by_prevalence_summary$penetrance = factor(benign_biallelic_by_prevalence_summary$penetrance, 
+                                                           levels=c("High", "Moderate", "Low/Uncertain"))
+
+ggplot(biallelic_by_prevalence_summary) +
+  geom_point(aes(x=penetrance, y=no_assoc_biallelic_rate), pch=21, size=4, color="black", fill="#113e55",
+             position = position_nudge(x=0.3)) +
+  geom_errorbar(aes(x=penetrance, 
+                    ymin=no_assoc_biallelic_rate_lower, ymax=no_assoc_biallelic_rate_upper, y=no_assoc_biallelic_rate ),
+                color="#113e55", width=0.02, position = position_nudge(x=0.3)) + 
+  geom_point(aes(x=penetrance, y=assoc_biallelic_rate), pch=21, size=4, color="black", fill="#990000") +
+  geom_errorbar(aes(x=penetrance, 
+                    ymin=assoc_biallelic_rate_lower, ymax=assoc_biallelic_rate_upper, y=assoc_biallelic_rate ),
+                color="#990000", width=0.02) + 
+  geom_point(aes(x=penetrance, y=biallelic_rate_any_assoc), pch=21, size=4, color="black", fill="darkgreen",
+             position = position_nudge(x=-0.1)) +
+  geom_errorbar(aes(x=penetrance, 
+                    ymin=biallelic_rate_any_assoc_lower, ymax=biallelic_rate_any_assoc_upper, y=biallelic_rate_any_assoc ),
+                color="darkgreen", width=0.02, position = position_nudge(x=-0.1)) + 
+  geom_point(data=benign_biallelic_by_prevalence_summary,
+             aes(x=penetrance, y=prev_any_biallelic_rate), pch=21, size=4, color="black", fill="gray40",
+             position = position_nudge(x=0.15)) +
+  geom_errorbar(data=benign_biallelic_by_prevalence_summary,
+                aes(x=penetrance,
+                    ymin=prev_any_biallelic_rate_lower, ymax=prev_any_biallelic_rate_upper, y=prev_any_biallelic_rate ),
+                color="gray40", width=0.02, position = position_nudge(x=0.15)) +
+  theme(
+    axis.text.x = element_text(size=12, face="bold", hjust=1, vjust=1, angle=45),
+    axis.text.y = element_text(size=12, face="bold"),
+    plot.title = element_text(face = "bold", hjust = 0.5),
+    axis.title.x = element_text(margin = margin(t = 10, r = 0, b = 0, l = 0)),
+    axis.line = element_line(color="black"),
+    panel.spacing = unit(1.25, "lines"),
+    panel.background = element_rect(fill=NA, color=NA),
+    legend.text = element_text(size = 12, face="bold"),
+    strip.background = element_rect(colour=NA, fill=NA),
+    strip.text = element_text(size=12, face="bold")
+  ) +
+  scale_x_discrete(expand=c(0.2,0.01)) +
+  scale_y_continuous(expand=c(0.01,0.01), label=percent, limits=c(0,1), breaks=(0:5) * 0.2) +
+  xlab("") +
+  ylab("Biallelic rate")
+
+```
+
+```{R Panel C}
+  path_gene_pancancer_summary <-
+    germline_variants %>% 
+    filter(is_tumor_suppressor, sample_facets_qc_passed) %>% 
+    dplyr::mutate(Proposed_level = "Pancancer") %>%
+    dplyr::group_by(Hugo_Symbol, Hugo_Symbolp, Proposed_level) %>%
+    dplyr::summarise(
+      total_count = n(),
+      num_biallelic=length(which(biallelic_type != "None")),
+      num_mut_lost = length(which(biallelic_type == "None" &
+                                    zygosity_in_tumor == "Loss_of_Mut")),
+      biallelic_rate = round(num_biallelic/total_count, 3),
+      mut_loss_rate = round(num_mut_lost/total_count, 3)) %>%
+    dplyr::mutate(
+      wt_rate = 1 - biallelic_rate - mut_loss_rate,
+      loss_rate = biallelic_rate + mut_loss_rate)
+
+  significance <-
+    path_gene_pancancer_summary %>%
+    setNames(paste0('path.', names(.))) %>% 
+    data.table %>%
+    dplyr::left_join(benign_gene_pancancer_summary %>% setNames(paste0('ben.', names(.))) %>% data.table,
+              by=c("path.Hugo_Symbol" = "ben.Hugo_Symbol",
+                   "path.Proposed_level" = "ben.Proposed_level")) %>%
+    dplyr::filter(!is.na(ben.total_count), path.total_count > 0) %>%
+    dplyr::rowwise() %>% 
+    dplyr::mutate(
+      pval = fisher.test(
+        matrix(c(path.num_biallelic, path.total_count - path.num_biallelic,
+                 ben.num_biallelic, ben.total_count - ben.num_biallelic ),
+               byrow=T, nrow=2), simulate.p.value=TRUE, B=1e5)$p.value) %>%
+    dplyr::mutate(pval = ifelse(pval > 1, 1, pval))
+  
+  #############
+  ############# Plot
+  #############
+  selected_for_plot <-
+    germline_variants %>% 
+    filter(is_tumor_suppressor, sample_facets_qc_passed) %>% 
+    dplyr::group_by(Hugo_Symbolp, penetrance) %>% 
+    dplyr::summarise(tot=n(), biallelic=length(which(biallelic_type != "None"))) %>% 
+    
+    dplyr::left_join(significance %>% 
+                       dplyr::filter(path.Proposed_level == "Pancancer") %>% 
+                       dplyr::select(Hugo_Symbol=path.Hugo_Symbol, 
+                                     Hugo_Symbolp=path.Hugo_Symbolp, 
+                                     path.total_count, 
+                                     path.num_biallelic, 
+                                     path.biallelic_rate, 
+                                     ben.total_count, 
+                                     ben.num_biallelic, 
+                                     ben.biallelic_rate, 
+                                     pval)) %>% 
+    dplyr::filter(tot >= 4, path.biallelic_rate > 0.15) %>% 
+    dplyr::filter(!is.na(path.total_count)) %>% 
+    dplyr::mutate(path.biallelic_rate_lower = binom.confint(path.num_biallelic, 
+                                                     path.total_count, 
+                                                     method="wilson")$lower,
+           path.biallelic_rate_upper = binom.confint(path.num_biallelic, 
+                                                     path.total_count, 
+                                                     method="wilson")$upper,
+           ben.biallelic_rate_lower = binom.confint(ben.num_biallelic, 
+                                                    ben.total_count, 
+                                                    method="wilson")$lower,
+           ben.biallelic_rate_upper = binom.confint(ben.num_biallelic, 
+                                                    ben.total_count, 
+                                                    method="wilson")$upper) %>%
+    dplyr::arrange(penetrance, desc(path.biallelic_rate)) %>%
+    dplyr::mutate(pval_stars = 
+             ifelse(pval < 0.001, "***", 
+                    ifelse(pval < 0.01, "**", 
+                           ifelse(pval < 0.05, "*", "")))) %>%
+    dplyr::filter(path.biallelic_rate > 0.25 | path.total_count > 4 | pval < 0.05) 
+  
+  
+  selected_for_plot <- 
+    selected_for_plot %>% 
+    dplyr::rowwise() %>%
+    dplyr::mutate(Hugo_Symbol_starred=paste0(pval_stars, Hugo_Symbolp))
+  
+  
+  selected_for_plot$Hugo_Symbol = factor(selected_for_plot$Hugo_Symbol,
+                                         levels=unique((selected_for_plot %>% 
+                                                          arrange(desc(path.biallelic_rate)))$Hugo_Symbol))
+  
+  selected_for_plot$Hugo_Symbolp = factor(selected_for_plot$Hugo_Symbolp, 
+                                          levels=(selected_for_plot$Hugo_Symbolp %>% unique))
+  
+  selected_for_plot$Hugo_Symbol_starred = factor(selected_for_plot$Hugo_Symbol_starred, 
+                                                 levels=(selected_for_plot$Hugo_Symbol_starred %>% unique))
+  
+  selected_for_plot$penetrance = factor(selected_for_plot$penetrance, 
+                                        levels=c("High", "Moderate", "Low", "Uncertain"))
+  
+  ggplot(selected_for_plot) +
+    geom_point(aes(x=as.factor(Hugo_Symbol_starred), y=ben.biallelic_rate), 
+               color="#B3B3B3", size=3, position = position_nudge(x=0.15)) +
+    geom_errorbar(aes(x=as.factor(Hugo_Symbol_starred), 
+                      ymin=ben.biallelic_rate_lower, ymax=ben.biallelic_rate_upper, y=ben.biallelic_rate ),
+                  color="#B3B3B3",
+                  width=0.1, position = position_nudge(x=0.15)) + 
+    geom_point(aes(x=as.factor(Hugo_Symbol_starred), y=path.biallelic_rate), 
+               color="#14588C", size=3) +
+    geom_errorbar(aes(x=as.factor(Hugo_Symbol_starred), 
+                      ymin=path.biallelic_rate_lower, ymax=path.biallelic_rate_upper, y=path.biallelic_rate ),
+                  color="#14588C",
+                  width=0.1) + 
+    facet_grid(. ~ penetrance, scales="free", space="free") +
+    theme( 
+      axis.text.x = element_text(size=10, face="bold", hjust=1, vjust=0.5, angle=90),
+      axis.text.y = element_text(size=10, face="bold"),
+      plot.title = element_text(face = "bold", hjust = 0.5),
+      axis.title.x = element_text(margin = margin(t = 10, r = 0, b = 0, l = 0)),
+      axis.line = element_line(color="black"),
+      panel.spacing = unit(1.25, "lines"),
+      panel.background = element_rect(fill=NA, color=NA),
+      legend.text = element_text(size = 12, face="bold"),
+      strip.background = element_rect(colour=NA, fill=NA),
+      strip.text = element_text(size=12, face="bold")
+    ) +
+    scale_x_discrete(expand=c(0.05,0.01)) +
+    scale_y_continuous(expand=c(0.05,0.01), label=percent, limits=c(0,1), breaks=(0:5) * 0.2) +
+    xlab("") +
+    ylab("")
+```
+
+

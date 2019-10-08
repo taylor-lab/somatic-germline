@@ -1,0 +1,95 @@
+---
+title: "Figure 4"
+output: html_document
+chunk_output_type: console
+---
+
+```{r setup, include = FALSE, echo = FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, autodep = knitr::dep_prev())
+source(here::here('scripts/prerequisites.R'))
+```
+
+
+### Panel A
+```{r Panel A}
+  loss_mut_rates_by_penet <-
+    germline_variants %>% 
+    filter(is_tumor_suppressor, sample_facets_qc_passed) %>% 
+    dplyr::mutate(penetrance = ifelse( penetrance %in% c("Low", "Uncertain"), 
+                                       "Low/Unc", as.character(penetrance))) %>%
+    dplyr::group_by(penetrance) %>%
+    dplyr::summarise(total=n(),
+                     n_loss_mut = length(which(zygosity_in_tumor == 'Loss_of_Mut' & biallelic_type == 'None')),
+                     loss_mut_rate = n_loss_mut/total) %>%
+    
+    ungroup %>%
+    dplyr::mutate(loss_mut_rate_lower = binom.confint(n_loss_mut, total, methods = 'wilson')$lower,
+                  loss_mut_rate_upper = binom.confint(n_loss_mut, total, methods = 'wilson')$upper) %>%
+    dplyr::mutate(penetrance = factor(penetrance, levels=c("High", "Moderate", "Low/Unc")))
+  
+  ggplot(loss_mut_rates_by_penet, aes(x=penetrance, y=loss_mut_rate)) +
+    geom_bar(stat="identity", fill="black") +
+    geom_errorbar(aes(x=penetrance, 
+                      ymin=loss_mut_rate_lower, ymax=loss_mut_rate_upper, y=loss_mut_rate),
+                  color="black", width=0.02) + 
+    theme(
+      axis.text.x = element_text(size=12, face="bold", hjust=1, vjust=1, angle=45),
+      axis.text.y = element_text(size=12, face="bold"),
+      plot.title = element_text(face = "bold", hjust = 0.5),
+      axis.title.x = element_text(margin = margin(t = 10, r = 0, b = 0, l = 0)),
+      axis.line = element_line(color="black"),
+      panel.spacing = unit(1.25, "lines"),
+      panel.background = element_rect(fill=NA, color=NA),
+      legend.text = element_text(size = 12, face="bold"),
+      strip.background = element_rect(colour=NA, fill=NA),
+      strip.text = element_text(size=12, face="bold")
+    ) +
+    scale_y_continuous(expand=c(0.02,0), label=percent) +
+    xlab("") +
+    ylab("% pathogenic allele loss")
+
+```
+
+```{r Panel B}
+loss_mut_rates_by_assoc <-
+  germline_variants %>% 
+  filter(is_tumor_suppressor, sample_facets_qc_passed) %>% 
+  left_join(gene_cancer_type_assoc, by=c("Hugo_Symbol" = "gene", 
+                                         "Proposed_level" = "cancer_type", 
+                                         "penetrance")) %>%
+  dplyr::mutate(association_by_prevalence = ifelse(grepl('Yes', association_by_prevalence), 'Yes', 'No')) %>%
+  dplyr::group_by(association_by_prevalence) %>%
+  dplyr::summarise(total=n(),
+                   n_loss_mut = length(which(zygosity_in_tumor == 'Loss_of_Mut' & biallelic_type == 'None')),
+                   loss_mut_rate = n_loss_mut/total) %>%
+  ungroup %>%
+  dplyr::mutate(association_by_prevalence = factor(association_by_prevalence, levels=c('Yes', 'No')),
+                loss_mut_rate_lower = binom.confint(n_loss_mut, total, methods = 'wilson')$lower,
+                loss_mut_rate_upper = binom.confint(n_loss_mut, total, methods = 'wilson')$upper)
+  
+  fisher_func(c(299, 1934-299,27, 487-27))
+  
+  ggplot(loss_mut_rates_by_assoc, aes(x=association_by_prevalence, y=loss_mut_rate)) +
+    geom_bar(stat="identity", fill="black") +
+    geom_errorbar(aes(x=association_by_prevalence, 
+                      ymin=loss_mut_rate_lower, ymax=loss_mut_rate_upper, y=loss_mut_rate),
+                  color="black", width=0.02) + 
+    theme(
+      axis.text.x = element_text(size=12, face="bold", hjust=1, vjust=1, angle=45),
+      axis.text.y = element_text(size=12, face="bold"),
+      plot.title = element_text(face = "bold", hjust = 0.5),
+      axis.title.x = element_text(margin = margin(t = 10, r = 0, b = 0, l = 0)),
+      axis.line = element_line(color="black"),
+      panel.spacing = unit(1.25, "lines"),
+      panel.background = element_rect(fill=NA, color=NA),
+      legend.text = element_text(size = 12, face="bold"),
+      strip.background = element_rect(colour=NA, fill=NA),
+      strip.text = element_text(size=12, face="bold")
+    ) +
+    scale_y_continuous(expand=c(0.02,0), label=percent) +
+    xlab("") +
+    ylab("% pathogenic allele loss")
+
+```
+
+
