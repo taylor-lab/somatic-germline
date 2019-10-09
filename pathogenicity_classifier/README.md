@@ -47,6 +47,6 @@ python germline_classifier.py --classifier_input data/test_annotated.maf --class
 # Output
 Predictions from classifier are stored in column "prediction" as a binary value. The column "prediction_probability" shows the probability of being called pathogenic for every variant. 
 
-Note : the scripts extract rare variants based on gnomAD frequencies and minor allele frequency within provided aggregate maf. It also extracts unique variants and subsets to variant classes that exclude UTR and silent mutations. 
+Note : the scripts extract rare variants based on gnomAD frequencies and minor allele frequency within provided aggregate maf. It also extracts unique variants and subsets to variant classes that exclude UTR and silent mutations.  
 
 
