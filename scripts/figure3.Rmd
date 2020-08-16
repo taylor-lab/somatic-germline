@@ -12,62 +12,54 @@ source(here::here('scripts/prerequisites.R'))
 
 ### Panel A
 ```{r Panel A}
-  category_levels <- c('WT:', 'Uncertain:Het', 'Uncertain:Bi',
+category_levels <- c('Non-carrier', 'Uncertain:Het', 'Uncertain:Bi',
                        'Low:Het', 'Low:Bi',
                        'Moderate:Het', 'Moderate:Bi',
                        'High:Het', 'High:Bi', 'ignore')
-  clinical <-
-    clinical_age_dx %>%
-    janitor::clean_names() %>% 
-    dplyr::filter(age_at_dx != 'Unknown') %>%
-    dplyr::mutate(age_at_dx = as.integer(age_at_dx)) %>%
-    dplyr::filter(age_at_dx > 18) %>%  
-    dplyr::left_join(germline_variants %>% 
-                       dplyr::mutate(ignore = ifelse(!(Normal_Sample %in% samples_facets_qc_passed) | Type !='TS', T, F)) %>% 
-                       dplyr::select(patient, Normal_Sample, penetrance, biallelic_type, ignore) %>% 
-                       dplyr::mutate(zygosity = ifelse(biallelic_type == 'None', "Het", 'Bi')) %>% 
-                       dplyr::mutate(category = ifelse(ignore, 'ignore', paste0(penetrance, ':', zygosity))) %>% 
-                       dplyr::mutate(category = factor(category, levels=category_levels)) %>%
-                       unique %>% 
-                       dplyr::group_by(patient, Normal_Sample) %>%
-                       dplyr::summarise(category =  sort(category, decreasing = T)[1]) %>%
-                       dplyr::ungroup(), 
-                     by=c("patient")) %>% 
-    rowwise %>%
-    dplyr::mutate(category = ifelse(is.na(category), "WT:", as.character(category))) %>%  
-    dplyr::filter(category != 'ignore') %>%
-    dplyr::mutate(category = factor(category, levels=category_levels[!category_levels %in% 'ignore'])) %>%
-    dplyr::mutate(penetrance = unlist(strsplit(as.character(category), ':'))[1],
-           zygosity = unlist(strsplit(as.character(category), ':'))[2]) 
-
-  summary(coxph(Surv(age_at_dx) ~ category, data=clinical))
   
-  ggplot(clinical %>%
-           dplyr::mutate(penetrance = factor(penetrance, levels=c("WT", "High", "Moderate", "Low", "Uncertain"))),
-         aes(x=zygosity, y=age_at_dx, fill=as.factor(penetrance), color=as.factor(penetrance))) + 
-    geom_boxplot(outlier.shape = NA, color="gray30", alpha=0.8, width = 0.8) +
-    facet_grid(. ~ penetrance, scales="free") +
-    scale_fill_manual (values=c("#4D556B", "#41AB5D", "#7FCDBB", "#C7E9C0", "#BDBDBD")) +
-    scale_color_manual(values=c("#4D556B", "#41AB5D", "#7FCDBB", "#C7E9C0", "#BDBDBD")) +
-    scale_x_discrete(expand=c(0.1, 0.01)) +
-    scale_y_continuous(breaks=10*(1:10), limits =c(0,110), expand=c(0.01, 0.01)) +
-    theme(axis.text=element_text(size=12, face="bold"),
-          axis.text.x = element_text(hjust=0.5, vjust=1),
-          axis.line = element_line(colour = "black"),
-          plot.title = element_text(face = 'bold',hjust = 0.5),
-          panel.grid.major = element_line(colour=NA),
-          panel.grid.minor = element_line(colour=NA),
-          panel.spacing = unit(0.75, "lines"),
-          panel.background = element_rect(fill=NA, color=NA),
-          legend.text = element_text(size = 12, face="bold"),
-          legend.position="none",
-          legend.justification = c(0, 1),
-          legend.direction="horizontal",
-          strip.background = element_rect(colour=NA, fill=NA),
-          strip.text = element_text(size=12, face="bold")
-    ) +
-    xlab("") +
-    ylab("Age at diagnosis")
+penetrance_levels <-  c("Non-carrier", "High", "Moderate", "Low", "Uncertain")
+
+figure3a_data <-
+  figure3a_data %>%
+  mutate(penetrance = factor(penetrance, levels=penetrance_levels),
+         category = factor(category, levels=category_levels))
+
+ggplot(figure3a_data %>%
+         mutate(penetrance = factor(penetrance, levels=c("Non-carrier", "High", "Moderate", "Low", "Uncertain"))),
+       aes(x=zygosity, y=age_at_dx, fill=as.factor(penetrance), color=as.factor(penetrance))) + 
+  facet_grid(. ~ penetrance, scales="free_x") +
+  geom_point(pch=21, alpha=0.5, position = position_jitter(width=0.15, height=0.15)) +
+  geom_boxplot(outlier.shape = NA, color="gray30", alpha=0.8, width = 0.8) +
+  scale_fill_manual (values=c("#4D556B", "#41AB5D", "#7FCDBB", "#C7E9C0", "#BDBDBD")) +
+  scale_color_manual(values=c("#4D556B", "#41AB5D", "#7FCDBB", "#C7E9C0", "#BDBDBD")) +
+  scale_x_discrete(expand=c(0.1, 0.01)) +
+  scale_y_continuous(breaks=10*(1:10), limits =c(0,110), expand=c(0.01, 0.01)) +
+  theme(axis.text=element_text(size=12, face="bold"),
+        axis.text.x = element_text(hjust=0.5, vjust=1),
+        axis.line = element_line(colour = "black"),
+        plot.title = element_text(face = 'bold',hjust = 0.5),
+        panel.grid.major = element_line(colour=NA),
+        panel.grid.minor = element_line(colour=NA),
+        panel.spacing = unit(0.75, "lines"),
+        panel.background = element_rect(fill=NA, color=NA),
+        legend.text = element_text(size = 12, face="bold"),
+        legend.position="none",
+        legend.justification = c(0, 1),
+        legend.direction="horizontal",
+        strip.background = element_rect(colour=NA, fill=NA),
+        strip.text = element_text(size=12, face="bold")
+  ) +
+  xlab("") +
+  ylab("Age at diagnosis")
+
+
+forestmodel::forest_model(lm(age_at_dx ~ category + cancer_type + fga + sex + sample_type , 
+                             figure3a_data %>% 
+                               filter(category %in% c("Non-carrier", "High:Het", "High:Bi"))))$data      
+
+forestmodel::forest_model(lm(age_at_dx ~ category + cancer_type + fga + sex + sample_type , 
+                             figure3a_data %>% 
+                               filter(category %in% c("Non-carrier", "Moderate:Het", "Moderate:Bi"))))$data      
 
 ```
 

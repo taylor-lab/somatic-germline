@@ -12,23 +12,24 @@ suppressPackageStartupMessages({
   library(here)
   library(survival)
   library(survminer)
+  library(forestmodel)
 })
 
 # Load data -------------------------------------------------------------------------------------------------------
-germline_cnv <- fread('../data/germline_cnv_V2.txt')
-germline_variants <- fread('../data/germline_mutations_V3.txt')
+germline_cnv <- fread('../data/germline_cnv.txt')
+germline_variants <- fread('../data/germline_mutations.maf')
 
 cancer_types = read_xlsx('../data/supp_tables/Table S1 - Cancer Types in cohort.xlsx')
 gene_variant_level_pen = read_xlsx('../data/supp_tables/Table S2 - Gene and variant-level penetrance assignments.xlsx') %>% janitor::clean_names()
-gene_cancer_type_assoc = read_xlsx('../data/supp_tables/Table S5 - Gene and cancer type associations.xlsx') %>% janitor::clean_names()
-clinical_age_dx = read_xlsx('../data/supp_tables/Table Sx - Clinical.xlsx')
 
+# load: samples_facets_qc_passed, figure2_data, figure3a_data
 load('../data/supp_data_github.Rdata')
 
 germline_variants <-
   germline_variants %>%
-  left_join(gene_variant_level_pen %>% select(gene, type) %>% unique, by=c("Hugo_Symbol" = "gene")) %>% 
-  mutate(is_tumor_suppressor = ifelse(type == 'TS', T, F)) %>%
+  left_join(gene_variant_level_pen %>% select(gene, is_tumor_suppressor) %>% unique, by=c("Hugo_Symbol" = "gene")) %>% 
+  mutate(is_tumor_suppressor = 
+           ifelse(!is.na(is_tumor_suppressor) & is_tumor_suppressor == "Y", T, F)) %>%
   mutate(sample_facets_qc_passed = ifelse(Normal_Sample %in% samples_facets_qc_passed, T, F)) %>%
   mutate(Hugo_Symbolp = paste0(Hugo_Symbol, ':', substr(penetrance,1,1)))
 
