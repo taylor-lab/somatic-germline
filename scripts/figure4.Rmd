@@ -12,25 +12,27 @@ source(here::here('scripts/prerequisites.R'))
 
 ### Panel A
 ```{r Panel A}
-  loss_mut_rates_by_penet <-
-    germline_variants %>% 
-    filter(is_tumor_suppressor, sample_facets_qc_passed) %>% 
-    dplyr::mutate(penetrance = ifelse( penetrance %in% c("Low", "Uncertain"), 
-                                       "Low/Unc", as.character(penetrance))) %>%
-    dplyr::group_by(penetrance) %>%
-    dplyr::summarise(total=n(),
-                     n_loss_mut = length(which(zygosity_in_tumor == 'Loss_of_Mut' & biallelic_type == 'None')),
-                     loss_mut_rate = n_loss_mut/total) %>%
-    
-    ungroup %>%
-    dplyr::mutate(loss_mut_rate_lower = binom.confint(n_loss_mut, total, methods = 'wilson')$lower,
-                  loss_mut_rate_upper = binom.confint(n_loss_mut, total, methods = 'wilson')$upper) %>%
-    dplyr::mutate(penetrance = factor(penetrance, levels=c("High", "Moderate", "Low/Unc")))
   
-  ggplot(loss_mut_rates_by_penet, aes(x=penetrance, y=loss_mut_rate)) +
+  
+loss_mut_rates_by_penet <-
+  figure2_data %>%
+  filter(pathogenic) %>% 
+  dplyr::mutate(penetrance = ifelse( penetrance %in% c("Low", "Uncertain"), 
+                                     "Low/Unc", as.character(penetrance))) %>%
+  dplyr::group_by(penetrance) %>%
+  summarise(total = n(), 
+            n_loss_mut = length(which(zygosity == 'Loss_of_Mut')), 
+            f_loss_mut = n_loss_mut/total) %>%
+    dplyr::mutate(
+      f_loss_mut_lower = binom.confint(n_loss_mut, total, methods = 'wilson')$lower,
+      f_loss_mut_upper = binom.confint(n_loss_mut, total, methods = 'wilson')$upper) %>%
+  dplyr::mutate(penetrance = factor(penetrance, levels=c("High", "Moderate", "Low/Unc")))
+
+
+  ggplot(loss_mut_rates_by_penet, aes(x=penetrance, y=f_loss_mut)) +
     geom_bar(stat="identity", fill="black") +
     geom_errorbar(aes(x=penetrance, 
-                      ymin=loss_mut_rate_lower, ymax=loss_mut_rate_upper, y=loss_mut_rate),
+                      ymin=f_loss_mut_lower, ymax=f_loss_mut_upper, y=f_loss_mut),
                   color="black", width=0.02) + 
     theme(
       axis.text.x = element_text(size=12, face="bold", hjust=1, vjust=1, angle=45),
@@ -52,27 +54,23 @@ source(here::here('scripts/prerequisites.R'))
 
 ```{r Panel B}
 loss_mut_rates_by_assoc <-
-  germline_variants %>% 
-  filter(is_tumor_suppressor, sample_facets_qc_passed) %>% 
-  left_join(gene_cancer_type_assoc, by=c("Hugo_Symbol" = "gene", 
-                                         "Proposed_level" = "cancer_type", 
-                                         "penetrance")) %>%
-  dplyr::mutate(association_by_prevalence = ifelse(grepl('Yes', association_by_prevalence), 'Yes', 'No')) %>%
-  dplyr::group_by(association_by_prevalence) %>%
-  dplyr::summarise(total=n(),
-                   n_loss_mut = length(which(zygosity_in_tumor == 'Loss_of_Mut' & biallelic_type == 'None')),
-                   loss_mut_rate = n_loss_mut/total) %>%
-  ungroup %>%
-  dplyr::mutate(association_by_prevalence = factor(association_by_prevalence, levels=c('Yes', 'No')),
-                loss_mut_rate_lower = binom.confint(n_loss_mut, total, methods = 'wilson')$lower,
-                loss_mut_rate_upper = binom.confint(n_loss_mut, total, methods = 'wilson')$upper)
-  
+  figure2_data %>% 
+  filter(pathogenic) %>%  
+  group_by(associated) %>% 
+  summarise(total = n(), 
+            n_loss_mut = length(which(zygosity == 'Loss_of_Mut')), 
+            f_loss_mut = n_loss_mut/total) %>%
+    dplyr::mutate(
+      f_loss_mut_lower = binom.confint(n_loss_mut, total, methods = 'wilson')$lower,
+      f_loss_mut_upper = binom.confint(n_loss_mut, total, methods = 'wilson')$upper)
+
   fisher_func(c(299, 1934-299,27, 487-27))
+  fisher_func(c(299, 1941-299,27, 480-27))
   
-  ggplot(loss_mut_rates_by_assoc, aes(x=association_by_prevalence, y=loss_mut_rate)) +
+  ggplot(loss_mut_rates_by_assoc, aes(x=associated, y=f_loss_mut)) +
     geom_bar(stat="identity", fill="black") +
-    geom_errorbar(aes(x=association_by_prevalence, 
-                      ymin=loss_mut_rate_lower, ymax=loss_mut_rate_upper, y=loss_mut_rate),
+    geom_errorbar(aes(x=associated, 
+                      ymin=f_loss_mut_lower, ymax=f_loss_mut_upper, y=f_loss_mut),
                   color="black", width=0.02) + 
     theme(
       axis.text.x = element_text(size=12, face="bold", hjust=1, vjust=1, angle=45),
@@ -86,7 +84,7 @@ loss_mut_rates_by_assoc <-
       strip.background = element_rect(colour=NA, fill=NA),
       strip.text = element_text(size=12, face="bold")
     ) +
-    scale_y_continuous(expand=c(0.02,0), label=percent) +
+    scale_y_continuous(expand=c(0.02,0), label=percent, limits=c(0,0.2)) +
     xlab("") +
     ylab("% pathogenic allele loss")
 
