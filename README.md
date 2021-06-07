@@ -18,7 +18,7 @@ Place these in the `data` folder, `germline_mutations.maf`, and `germline_cnvs.t
 An HTML file containing the figures can be generated from the command-line for each main figure as such:
 
 ```shell
-R -e "rmarkdown::render('scripts/figure-1.Rmd', output_file = 'figure-1.html')"
+R -e "rmarkdown::render('scripts/figure-2.Rmd', output_file = 'figure-2.html')"
 ```
 
 ### Citation
