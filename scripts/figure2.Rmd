@@ -231,10 +231,12 @@ gene_level_zygosity$pvalue_adjusted = p.adjust(gene_level_zygosity$pvalue, metho
 
 gene_level_zygosity <-
   gene_level_zygosity %>%
-  mutate(gene_pen = paste0(Hugo_Symbol, ":", substr(penetrance, 1, 1)))
+  mutate(gene_pen = paste0(Hugo_Symbol, ":", substr(penetrance, 1, 1), ' (n=', total, ')'))
 
 gene_level_zygosity$penetrance = factor(gene_level_zygosity$penetrance, 
                                       levels=c("High", "Moderate", "Low", "Uncertain"))
+
+
 gene_level_zygosity$gene_pen = 
   factor(gene_level_zygosity$gene_pen, levels=(gene_level_zygosity %>% arrange(desc(path.biallelic_rate)))$gene_pen %>% unique)
 
