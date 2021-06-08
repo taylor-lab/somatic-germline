@@ -1,5 +1,5 @@
 ---
-title: "Figure 4"
+title: "Figure 5"
 output: html_document
 chunk_output_type: console
 ---
@@ -28,6 +28,8 @@ loss_mut_rates_by_penet <-
       f_loss_mut_upper = binom.confint(n_loss_mut, total, methods = 'wilson')$upper) %>%
   dplyr::mutate(penetrance = factor(penetrance, levels=c("High", "Moderate", "Low/Unc")))
 
+  fisher.test(matrix(c(56,658, 220, 1133), nrow=2, ncol=2))$p.value
+  fisher.test(matrix(c(56,658, 50, 304), nrow=2, ncol=2))$p.value
 
   ggplot(loss_mut_rates_by_penet, aes(x=penetrance, y=f_loss_mut)) +
     geom_bar(stat="identity", fill="black") +
@@ -64,9 +66,8 @@ loss_mut_rates_by_assoc <-
       f_loss_mut_lower = binom.confint(n_loss_mut, total, methods = 'wilson')$lower,
       f_loss_mut_upper = binom.confint(n_loss_mut, total, methods = 'wilson')$upper)
 
-  fisher_func(c(299, 1934-299,27, 487-27))
-  fisher_func(c(299, 1941-299,27, 480-27))
-  
+  fisher.test(matrix(c(299, 1642,27, 453), nrow=2, ncol=2))$p.value
+
   ggplot(loss_mut_rates_by_assoc, aes(x=associated, y=f_loss_mut)) +
     geom_bar(stat="identity", fill="black") +
     geom_errorbar(aes(x=associated, 
