@@ -1,0 +1,113 @@
+Hugo_Symbol	Patient_ID	zygosity	CANCER_TYPE	MSI_type	tumor_group
+MSH2	pt_0	Biallelic	Colorectal Cancer	MSI	1
+MSH2	pt_1	Biallelic	Colorectal Cancer	MSI	1
+MSH6	pt_2	Biallelic	Endometrial Cancer	MSI	1
+MLH1	pt_3	Biallelic	Small Bowel Cancer	MSI	1
+MSH2	pt_4	Biallelic	Prostate Cancer	MSI	2
+MSH6	pt_5	Biallelic	Colorectal Cancer	MSI	1
+MLH1	pt_6	Biallelic	Colorectal Cancer	MSI	1
+MSH6	pt_7	Biallelic	Endometrial Cancer	MSS	1
+MSH2	pt_8	Biallelic	Colorectal Cancer	MSI	1
+MSH2	pt_9	Biallelic	Colorectal Cancer	MSI	1
+MSH2	pt_10	Biallelic	Colorectal Cancer	MSI	1
+MLH1	pt_11	Biallelic	Colorectal Cancer	MSI	1
+MLH1	pt_12	Biallelic	Colorectal Cancer	MSI	1
+MSH2	pt_13	Biallelic	Colorectal Cancer	MSI	1
+MSH2	pt_14	Biallelic	Colorectal Cancer	MSI	1
+MSH2	pt_15	Biallelic	Colorectal Cancer	MSI	1
+MSH2	pt_16	Biallelic	Bladder Cancer	MSI	1
+MLH1	pt_17	Biallelic	Colorectal Cancer	MSI	1
+MSH2	pt_18	Biallelic	Hepatobiliary Cancer	MSI	2
+MSH2	pt_19	Biallelic	Colorectal Cancer	MSI	1
+MSH2	pt_20	Biallelic	Colorectal Cancer	MSI	1
+PMS2	pt_21	Biallelic	Colorectal Cancer	MSI	1
+MSH2	pt_22	Biallelic	Prostate Cancer	MSI	2
+MLH1	pt_23	Biallelic	Colorectal Cancer	MSI	1
+MLH1	pt_24	Biallelic	Pancreatic Cancer	MSI	2
+MSH2	pt_25	Biallelic	Bladder Cancer	MSI	1
+MSH2	pt_26	Biallelic	Esophagogastric Cancer	MSI	1
+MSH2	pt_27	Biallelic	Bladder Cancer	MSI	1
+MLH1	pt_28	Biallelic	Colorectal Cancer	MSI	1
+MLH1	pt_29	Biallelic	Colorectal Cancer	MSI	1
+PMS2	pt_30	Biallelic	Colorectal Cancer	MSI	1
+MSH2	pt_31	Biallelic	Colorectal Cancer	MSI	1
+MSH2	pt_32	Biallelic	Prostate Cancer	MSI	2
+MLH1	pt_33	Biallelic	Endometrial Cancer	MSI	1
+MLH1	pt_34	Biallelic	Colorectal Cancer	MSI	1
+MSH2	pt_35	Biallelic	Esophagogastric Cancer	MSI	1
+MSH2	pt_36	Biallelic	Bladder Cancer	MSI	1
+MSH2	pt_37	Biallelic	Bladder Cancer	MSI	1
+MSH2	pt_38	Biallelic	Pancreatic Cancer	MSI	2
+MSH2	pt_39	Biallelic	Bladder Cancer	MSI	1
+MLH1	pt_40	Biallelic	Endometrial Cancer	MSI	1
+MSH2	pt_41	Biallelic	Small Bowel Cancer	MSI	1
+MLH1	pt_42	Biallelic	Bladder Cancer	MSI	1
+MSH2	pt_43	Biallelic	Bladder Cancer	MSI	1
+MSH6	pt_44	Biallelic	Endometrial Cancer	MSI	1
+MLH1	pt_45	Biallelic	Colorectal Cancer	MSI	1
+MSH6	pt_46	Biallelic	Pancreatic Cancer	MSI	2
+MLH1	pt_47	Biallelic	Colorectal Cancer	MSI	1
+MSH2	pt_48	Biallelic	Germ Cell Tumor	MSI	4
+MSH2	pt_49	Biallelic	Bladder Cancer	MSI	1
+MSH6	pt_50	Biallelic	Endometrial Cancer	MSI	1
+PMS2	pt_51	Biallelic	Prostate Cancer	MSI	2
+MSH6	pt_52	Biallelic	Colorectal Cancer	MSI	1
+MSH6	pt_53	Biallelic	Colorectal Cancer	MSI	1
+MSH2	pt_54	Biallelic	Endometrial Cancer	MSI	1
+MSH2	pt_55	Biallelic	Cancer of Unknown Primary	MSI	4
+MSH2	pt_56	Biallelic	Colorectal Cancer	MSI	1
+MSH2	pt_57	Biallelic	Soft Tissue Sarcoma	MSI	2
+MSH2	pt_58	Biallelic	Adrenocortical Carcinoma	MSS	1
+MLH1	pt_59	Biallelic	Endometrial Cancer	MSI	1
+MSH6	pt_60	Biallelic	Glioma	MSI	2
+MSH6	pt_61	Biallelic	Adrenocortical Carcinoma	MSI	1
+MSH2	pt_62	Biallelic	Prostate Cancer	MSI	2
+MSH6	pt_63	Biallelic	Mesothelioma	MSI	4
+MSH2	pt_64	Biallelic	Soft Tissue Sarcoma	MSS	2
+MSH6	pt_65	Biallelic	Bladder Cancer	MSI	1
+PMS2	pt_66	Biallelic	Endometrial Cancer	MSI	1
+MLH1	pt_67	Biallelic	Bone Cancer	MSS	4
+PMS2	pt_68	Biallelic	Soft Tissue Sarcoma	MSS	2
+MSH6	pt_69	Biallelic	Thyroid Cancer	MSS	3
+MSH6	pt_70	Biallelic	Bladder Cancer	MSS	1
+MLH1	pt_71	Biallelic	Hepatobiliary Cancer	MSS	2
+PMS2	pt_72	Biallelic	Pancreatic Cancer	MSS	2
+PMS2	pt_73	Biallelic	Non-Small Cell Lung Cancer	MSS	3
+MSH2	pt_74	Biallelic	Non-Hodgkin Lymphoma	MSS	4
+MLH1	pt_75	Biallelic	Colorectal Cancer	MSS	1
+MSH2	pt_76	Biallelic	Non-Small Cell Lung Cancer	MSS	3
+MSH2	pt_77	Biallelic	Bone Cancer	MSS	4
+MLH1	pt_78	Biallelic	Thyroid Cancer	MSS	3
+MSH6	pt_79	Biallelic	Breast Cancer	MSS	3
+MLH1	pt_80	Heterozygous	Colorectal Cancer	MSI	1
+PMS2	pt_81	Heterozygous	Melanoma	MSS	3
+PMS2	pt_82	Heterozygous	Hepatobiliary Cancer	MSS	2
+PMS2	pt_83	Heterozygous	Breast Cancer	MSS	3
+MSH2	pt_84	Heterozygous	Pancreatic Cancer	MSS	2
+MSH6	pt_85	Heterozygous	Prostate Cancer	MSS	2
+PMS2	pt_86	Heterozygous	Pancreatic Cancer	MSS	2
+PMS2	pt_87	Heterozygous	Breast Cancer	MSS	3
+MSH6	pt_88	Heterozygous	Breast Cancer	MSS	3
+PMS2	pt_89	Heterozygous	Germ Cell Tumor	MSS	4
+MSH6	pt_90	Heterozygous	Prostate Cancer	MSS	2
+MSH6	pt_91	Heterozygous	Breast Cancer	MSS	3
+MSH6	pt_92	Heterozygous	Breast Cancer	MSS	3
+PMS2	pt_93	Heterozygous	Breast Cancer	MSS	3
+MSH6	pt_94	Heterozygous	Non-Small Cell Lung Cancer	MSS	3
+MSH2	pt_95	Heterozygous	Glioma	MSS	2
+MLH1	pt_96	Heterozygous	Breast Cancer	MSS	3
+MSH6	pt_97	Heterozygous	Small Bowel Cancer	MSS	1
+PMS2	pt_98	Heterozygous	Hepatobiliary Cancer	MSS	2
+MSH6	pt_99	Heterozygous	Renal Cell Carcinoma	MSS	2
+MSH6	pt_100	Heterozygous	Hepatobiliary Cancer	MSS	2
+PMS2	pt_101	Heterozygous	Hepatobiliary Cancer	MSS	2
+MSH6	pt_102	Heterozygous	Colorectal Cancer	MSS	1
+MSH6	pt_103	Heterozygous	Non-Small Cell Lung Cancer	MSS	3
+PMS2	pt_104	Heterozygous	Head and Neck Cancer	MSS	4
+MSH6	pt_105	Heterozygous	Renal Cell Carcinoma	MSS	2
+MSH6	pt_106	Heterozygous	Non-Small Cell Lung Cancer	MSS	3
+PMS2	pt_107	Heterozygous	Non-Small Cell Lung Cancer	MSS	3
+PMS2	pt_108	Heterozygous	Glioma	MSS	2
+PMS2	pt_109	Heterozygous	Prostate Cancer	MSS	2
+PMS2	pt_110	Heterozygous	Prostate Cancer	MSS	2
+MLH1	pt_111	Heterozygous	Bone Cancer	MSS	4
