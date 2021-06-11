@@ -21,6 +21,10 @@ An HTML file containing the figures can be generated from the command-line for e
 R -e "rmarkdown::render('scripts/figure-2.Rmd', output_file = 'figure-2.html')"
 ```
 
+Install python packges using pip or conda
+pandas, numpy, scipt, matplotlib, seaborn
+
+For jupyter notebooks, download notebooks and contents of the `data` folder. Ensure that the folder structure follows the same relative structure as the GitHub repository and execute notebooks.
 ### Citation
 - pending
 
